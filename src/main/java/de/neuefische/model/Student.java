@@ -1,4 +1,4 @@
-package de.neuefische;
+package de.neuefische.model;
 
 public class Student {
     //Properties
@@ -7,40 +7,47 @@ public class Student {
         private int birthYear;
         private  String className;
     //Access methods
-        Student() {
+    public Student() {
 
         }
-        Student(String name, int birthYear){
+    public Student(String name, int birthYear){
             this.name = name;
             this.birthYear = birthYear;
             setClassName();
         }
 
-        Student(String name, int birthYear, String className){
+    public Student(String name, int birthYear, String className){
             this.name = name;
             this.birthYear = birthYear;
             this.className = className;
         }
-        void setName(String name){
+    public void setName(String name){
             this.name = name;
         }
-        String getName(){
+    public String getName(){
             return this.name;
         }
-        void setBirthYear( int birthYear){
+    public void setBirthYear( int birthYear){
             this.birthYear = birthYear;
         }
 
-        void setClassName(){
+    public int getBrithYear() {
+        return this.birthYear;
+    }
+
+    public void setClassName(){
             int classYear = currentYear - this.birthYear - 6;
             this.name.split(" ");
             String lastName = this.name.substring(this.name.lastIndexOf(" "));
             char lastNameFistLetter = lastName.charAt(1);
             this.className ="" + classYear + "-" + lastNameFistLetter;
         }
-        String getClassName() {
-
+    public String getClassName() {
             return this.className;
         }
+    public String toString() {
+        String allInfo = "Name: " + this.name + " Birth: " + this.birthYear + " class: " + this.className;
+        return allInfo;
+    }
 
 }

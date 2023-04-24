@@ -1,11 +1,13 @@
 package de.neuefische;
 
+import de.neuefische.model.Student;
+
 public class Main {
     public static void main(String[] args) {
         /*
         //SvenjaCar
             Car svenjaCar = new Car();
-
+        No longer possible: getter & setter needed. package inclusion
             //Set private property
             svenjaCar.setBrand("BMW");
             //svenjaCar.year = 2012;
@@ -44,9 +46,10 @@ public class Main {
             tom.setName("Tom Meier");
             tom.setBirthYear(2012);
             tom.setClassName();
+            System.out.println(tom.toString());
 
             Student klaus = new Student("Klaus Bauer",2010);
-            System.out.println(klaus.getClassName());
+            System.out.println(klaus.toString());
 
 
     }

@@ -1,4 +1,4 @@
-package de.neuefische;
+package de.neuefische.model;
 
 public class Car {
         //Properties
@@ -7,52 +7,53 @@ public class Car {
         private double price;
         //static = set for all objects
         //final = unchangeable
-        boolean hasFourWheels = true;
+        private boolean hasFourWheels = true;
 
     //Methods
         //Constructor
-        Car(String brand, int year, double price, boolean hasFourWheels){
+    //Modifier: have Constructors & getter/Setter puplic
+    public  Car(String brand, int year, double price, boolean hasFourWheels){
             this.brand = brand;
             this.year = year;
             this.price = price;
             this.hasFourWheels = hasFourWheels;
         }
-    Car(String brand, int year, double price){
+    public Car(String brand, int year, double price){
         this.brand = brand;
         this.year = year;
         this.price = price;
     }
-        void honks() {
+    public  void honks() {
             System.out.println("HONK!");
             System.out.println();
             System.out.println("HONK! HONK!");
         }
 
-        int getYear() {
+    public   int getYear() {
             return year;
         }
-        void setYear(int year){
+    public  void setYear(int year){
             this.year = year;
         }
-        String getBrand() {
+    public   String getBrand() {
             return this.brand;
         }
-        void setBrand(String brand){
+    public   void setBrand(String brand){
             this.brand = brand;
         }
 
-        void printBrand(){
+    public  void printBrand(){
             System.out.println(brand);
         }
 
-        void setPrice(double price){
+    public   void setPrice(double price){
             this.price = price;
         }
 
-        double getPrice(){
+    public   double getPrice(){
             return this.price;
         }
-        void printPrice(double price){
+    public  void printPrice(double price){
             //this = explicitly THIS object
             System.out.println("Without this;");
             System.out.println(price);
